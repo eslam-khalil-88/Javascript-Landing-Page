@@ -1,0 +1,271 @@
+body{
+	/*  background-color: blue;   */
+	background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+	color:white;
+	font-size: 30px;
+	max-width : 100%;
+	
+
+     }
+ 
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+    
+	scroll-behavior: smooth;
+}
+
+h1{
+	margin-left: 15px;
+	margin-bottom:23px;
+	padding : 15px;
+	font-size: 80px;
+	font-family:"Arial Black", Gadget, sans-serif;
+}
+h5{
+	margin:0px;
+	padding:0px;
+}
+header{
+	margin-left:35px;
+	margin-right:34px;
+	font-family:Times New Roman;
+	font-size:42px;
+	border-bottom-style:solid;
+	border-color:yellow;
+	border-width: 1px;
+	
+}
+.text_1{
+	margin-left: 35px;
+	margin-right:24px;
+	font-family: serif;
+	font-size: 19px;
+
+}
+
+a{
+	color:yellow;
+
+}
+li:hover{
+	background-color:black;
+	text-decoration:none;
+	
+}
+li:active{
+	background-color:red;
+}
+li{
+	list-style-type:none;
+	text-align:left;
+	padding:15px;
+
+}
+
+
+/****************************************************************************/
+                 /*       Navigation Menu CSS styles        */
+                 /* Note : this menu is designed using Flex-box            */
+/****************************************************************************/
+.navigation_bar {
+    margin : 1px;
+    padding : 1px;
+}
+
+#Nav_menu{
+	position:fixed;
+	width:98.3%;
+	display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,0.9752275910364145) 15%, rgba(0,212,255,1) 100%);
+    height:12%;
+    border-radius:8px; 
+    transition: top 1.8s;         
+    font-family:Impact, Charcoal, sans-serif;
+    color:yellow;                                         
+
+}
+
+.img_box{
+	padding:7px;
+	font-size:20px;
+	width:8%;
+	text-align:center;
+	padding:14px;
+	padding-bottom:6px;
+
+}
+.box_1 {
+	text-align:left;
+	font-size:105%;
+	color:yellow;
+	font-family:Impact, Charcoal, sans-serif;
+	width:40%;
+	height:70%;
+	
+}
+.box_1 > p{
+	   line-height: 15%;
+       padding:1pt;
+       
+   }
+
+
+.box_2{
+	text-align:center;
+	padding:10px;
+	font-size:105%;
+	width:15%;
+}
+.box_2:hover{
+	background-color:black;
+}
+
+
+.box_3{
+	text-align:center;
+	padding:10px;
+	font-size:105%;
+	width:15%;
+}
+.box_3:hover{
+	background-color:black;
+}
+
+
+.box_4{
+	text-align:center;
+	padding:10px;
+	font-size:105%;
+	width:15%;
+}
+.box_4:hover{
+	background-color:black;
+}
+
+
+/**********************************************************************/
+/* A button will be created by JS to scroll up to the top of the page */
+/**********************************************************************/
+#Top_button{
+   
+   z-index : 999;
+   background-attachment: scroll;
+   position : sticky;
+   float : right;
+   width : 6.2%;
+       
+   
+}
+
+
+
+     /****************************************************************************/
+            /* Sections CSS Styles , with the container of all sections */
+            /*   Note : Page Sections are designed using Grid Display            */
+     /****************************************************************************/
+#Section_container{
+   
+   display:grid;   
+   grid-template-rows:300px 400px 400px 400px 400px 160px;
+   grid-template-columns:400px 400px 400px 100px;                 
+
+}
+#page_head{
+	font-size: 30px;
+    width : 60%;
+    height : 50%;
+	grid-row:1/1;
+	grid-column:1/4;
+}
+
+
+#Section_1{
+	float :left;
+	width : 97%;
+	font-size: 20px;
+	grid-row:2/2;
+	grid-column:1/3;
+}
+
+#Section_2{
+	float :right;
+	width : 97%;
+    padding : 30px;
+	font-size: 20px;
+	grid-row:3/3;
+	grid-column:2/5;
+}
+#Section_3{
+	float :left;
+	width : 97%;
+	font-size: 20px;
+	grid-row:4/4;
+	grid-column:1/3;
+}
+#Section_4{
+	float :right;
+	width : 97%;
+	padding : 30px;
+	font-size: 20px;
+	grid-row:5/5;
+	grid-column:2/5;
+}
+
+.footer {
+   position: relative;
+   width: 103%;
+   height : 102%;
+   font-size : 90%;
+   background-color: black;
+   color: white;
+   text-align: left;
+   grid-row:6/6;
+   grid-column:1/5;
+   
+}
+
+
+
+/********************************************************************************/
+/*   Making the designed webpage Responsive for Mobilephones and tablets        */
+/********************************************************************************/
+@media only screen and (max-width: 600px){
+   
+   h1 {
+        font-size: 3em;
+        
+    }
+    #Nav_menu{
+       height : 5%;
+       width : 60%;
+       
+     }
+
+     #Section_container{
+     	width : 100%;
+     	height:100%;
+     }
+     #Section_2 {
+        grid-column:1/3;
+     	} 
+     #Section_4{
+     	grid-column:1/3;
+        }
+     
+     button {
+     	display : inline-block;
+     	position : fixed;
+     	right : 36rem;
+        top : 76rem;
+     }
+
+  }
